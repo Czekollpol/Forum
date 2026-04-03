@@ -6,79 +6,107 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-    margin: 0;
-    padding: 0;
+    margin:0;
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+    display:flex;
 }
 
-header {
-    background: #020617;
-    padding: 20px;
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
+/* MENU */
+.sidebar{
+    width:220px;
+    background:#020617;
+    height:100vh;
+    padding:20px;
+    position:fixed;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 60px;
-    flex-wrap: wrap;
+.sidebar h2{
+    font-size:18px;
+    margin-bottom:20px;
 }
 
-.box {
-    background: #1e293b;
-    padding: 30px;
-    width: 250px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:10px 0;
+    padding:10px;
+    border-radius:6px;
 }
 
-.box:hover {
-    background: #334155;
-    transform: scale(1.05);
+.sidebar a:hover{
+    background:#1e293b;
 }
 
-.box h2 {
-    margin-bottom: 10px;
+/* CONTENT */
+.main{
+    margin-left:240px;
+    width:100%;
+    padding:40px;
+    text-align:center;
 }
 
-.box p {
-    font-size: 14px;
-    color: #cbd5e1;
+.container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.box{
+    background:#1e293b;
+    padding:30px;
+    width:250px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.box:hover{
+    background:#334155;
+    transform:scale(1.05);
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<header>📜 Zasady Serwera RP</header>
+<div class="sidebar">
+    <h2>📂 Menu</h2>
+
+    <a href="/">📜 Strona główna</a>
+    <a href="ZO/">📘 Zasady ogólne</a>
+    <a href="ZFP/">👮 Frakcje państwowe</a>
+    <a href="ZFK/">💰 Frakcje kryminalne</a>
+    <a href="ZL/">⭐ Zasady lidera</a>
+</div>
+
+<div class="main">
+
+<h1>📜 Zasady Serwera RP</h1>
 
 <div class="container">
     <a class="box" href="ZO/">
         <h2>Zasady ogólne</h2>
-        <p>Podstawowe zasady serwera</p>
     </a>
 
     <a class="box" href="ZFP/">
         <h2>Frakcje państwowe</h2>
-        <p>Goverment, National Guard</p>
     </a>
 
     <a class="box" href="ZFK/">
         <h2>Frakcje kryminalne</h2>
-        <p>Gang, Kartel</p>
     </a>
 
     <a class="box" href="ZL/">
         <h2>Zasady Lidera</h2>
-        <p>Obowiązki i zasady zarządzania frakcją</p>
     </a>
+</div>
+
 </div>
 
 </body>
